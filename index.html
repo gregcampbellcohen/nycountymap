@@ -20,176 +20,176 @@
 
 <style>
   
-  body {
-      margin: 0;
-      padding: 0;
-      background: #6b6b6b;
-      font-family: 'Franklin Gothic', sans-serif;
-      color: #000000;
+	body {
+		margin: 0;
+		padding: 0;
+		background: #6b6b6b;
+		font-family: 'Franklin Gothic', sans-serif;
+		color: #000000;
+	}
+  
+	h1 {
+		display: inline-block;
+		color: #140a2e;
+		font-weight: bold;
+		font-size: 25px;
+	}
+  
+  
+	h2 { width:100%; text-align:center; border-bottom: 1px solid #000; line-height:0.1em; margin:10px 0 20px; font-size: 21px } 
+  
+	h2 span { background:#fff; padding:0 10px; }
+  
+	h3 {
+		display: inline-block;
+		color: #140a2e;
+		font-size: 21px;
+	}
+  
+  
+	h4 {
+		display: inline-block;
+		color: #000000;
+		font-size: 17px;
+	}
+  
+	h5 {
+		display: inline-block;
+		color: #000000;
+		font-size: 18px;
+	}
+  
+	h6 {
+		display: inline-block;
+		color: #140a2e;
+		font-weight: bold;
+		font-size: 35px;
+	}
+  
+	#map {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 84%;
+	}
+  
+	.leaflet-tooltip {
+  min-width: 300px;
+  font-size: 140%;
+  white-space: normal;
   }
-
-  h1 {
-      display: inline-block;
-      color: #140a2e;
-      font-weight: bold;
-      font-size: 25px;
+  
+  .leaflet-center {
+	  left: 50%;
+	  transform: translate(-50%, 0%);
   }
-
-
-  h2 { width:100%; text-align:center; border-bottom: 1px solid #000; line-height:0.1em; margin:10px 0 20px; font-size: 21px } 
-
-  h2 span { background:#fff; padding:0 10px; }
-
-  h3 {
-      display: inline-block;
-      color: #140a2e;
-      font-size: 21px;
+  
+  .legend {
+	padding: 6px 6px;
+	font: 14px 'Franklin Gothic', sans-serif;
+	background: white;
+	background: rgba(255, 255, 255, 0.8);
+	line-height: 24px;
+	color: #555;
   }
-
-
-  h4 {
-      display: inline-block;
-      color: #000000;
-      font-size: 17px;
+  .legend h4 {
+	text-align: center;
+	font-size: 16px;
+	margin: 2px 12px 8px;
+	color: #777;
   }
-
-  h5 {
-      display: inline-block;
-      color: #000000;
-      font-size: 18px;
+  
+  .legend span {
+	position: relative;
+	bottom: 3px;
   }
-
-  h6 {
-      display: inline-block;
-      color: #140a2e;
-      font-weight: bold;
-      font-size: 35px;
+  
+  .legend i {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin: 0 8px 0 0;
+	opacity: 0.7;
   }
-
-  #map {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 90%;
+  
+  .titlebar i.icon {
+	background-size: 18px;
+	background-color: rgba(255, 255, 255, 1);
   }
-
-  .leaflet-tooltip {
-min-width: 300px;
-font-size: 140%;
-white-space: normal;
-}
-
-.leaflet-center {
-    left: 50%;
-    transform: translate(-50%, 0%);
-}
-
-.legend {
-  padding: 6px 6px;
-  font: 14px 'Franklin Gothic', sans-serif;
-  background: white;
-  background: rgba(255, 255, 255, 0.8);
-  line-height: 24px;
-  color: #555;
-}
-.legend h4 {
-  text-align: center;
-  font-size: 16px;
-  margin: 2px 12px 8px;
-  color: #777;
-}
-
-.legend span {
-  position: relative;
-  bottom: 3px;
-}
-
-.legend i {
-  width: 18px;
-  height: 18px;
-  float: left;
-  margin: 0 8px 0 0;
-  opacity: 0.7;
-}
-
-.titlebar i.icon {
-  background-size: 18px;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.titlebar {
-  padding: 6px 6px;
-  font: 14px 'Franklin Gothic Demi', sans-serif;
-  background: white;
-  background: rgba(255, 255, 255, 0.8);
-  color: #555;
-}
-.titlebar h4 {
-  text-align: center;
-  font-size: 16px;
-  margin: 2px 12px 8px;
-  color: #777;
-}
-
-.titlebar span {
-  position: relative;
-  bottom: 3px;
-}
-
-.titlebar i {
-  width: 18px;
-  height: 18px;
-  float: left;
-  margin: 0 8px 0 0;
-  opacity: 0.7;
-}
-
-
-
-.legend i.icon {
-  background-size: 18px;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-  label {
-      font-size: 1.1em;
-      font-weight: bold;
+  
+  .titlebar {
+	padding: 6px 6px;
+	font: 14px 'Franklin Gothic Demi', sans-serif;
+	background: white;
+	background: rgba(255, 255, 255, 0.8);
+	color: #555;
   }
-
-  footer {
-      padding: 6px;
-      width: 100%;
-      float: center;
+  .titlebar h4 {
+	text-align: center;
+	font-size: 16px;
+	margin: 2px 12px 8px;
+	color: #777;
   }
-
-  p {
-      font-size: 1em;
-      color: #000000;
+  
+  .titlebar span {
+	position: relative;
+	bottom: 3px;
   }
-
-  .link {
-      font-size: 1em;
-      color: #20651e;
-      font-weight: bold;
+  
+  .titlebar i {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin: 0 8px 0 0;
+	opacity: 0.7;
   }
-
-	li {
-    list-style-type: square;
-    list-style-position: outside;
-	margin-left: 1.2em;
-    text-indent: 0em;
-	font-size: 1em;
-}
-
-  .max-image-width {
-			width: 100%;
-		}
-
-    .sidebar {
-        width: 10%
-    }
-    
-</style>
+  
+  
+  
+  .legend i.icon {
+	background-size: 18px;
+	background-color: rgba(255, 255, 255, 1);
+  }
+  
+	label {
+		font-size: 1.1em;
+		font-weight: bold;
+	}
+  
+	footer {
+		padding: 6px;
+		width: 100%;
+		float: center;
+	}
+  
+	p {
+		font-size: 1em;
+		color: #000000;
+	}
+  
+	.link {
+		font-size: 1em;
+		color: #20651e;
+		font-weight: bold;
+	}
+  
+	  li {
+	  list-style-type: square;
+	  list-style-position: outside;
+	  margin-left: 1.2em;
+	  text-indent: 0em;
+	  font-size: 1em;
+  }
+  
+	.max-image-width {
+			  width: 100%;
+		  }
+  
+	  .sidebar {
+		  width: 16%
+	  }
+	  
+  </style>
 </head>
 <body>
   <div class='flex-parent viewport-full relative scroll-hidden'>
@@ -467,7 +467,7 @@ var titlebar = L.control({ position: "topcenter" });
 
 titlebar.onAdd = function(map) {
   var div = L.DomUtil.create("div", "titlebar");
-  div.innerHTML += "<h6>Environmental Hazards by County, New York State</h6><br>";
+  div.innerHTML += "<h6>Environmental Hazards by County</h6><br>";
   return div;
 };
 
